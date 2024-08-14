@@ -1,0 +1,77 @@
+SOLID Principles
+S - Single Responsibility Principle:
+	A class should have one reason to change.
+	Ex:
+	class Logger {
+		public void log(String msg) {
+			// Logger Logic
+		}
+	}
+	class Authenticator {
+		public void authenticate(String username, String password) {
+			// Authenticator Logic
+		}
+	}
+O - Open/Closed Principle:
+	Software entities (interface, class, methods.,) should be open for extension and closed for modification.
+	Ex:
+	interface IShape {
+		double calcArea();
+	}
+	class Rectangle implements IShape {
+		@Override
+		public double calcArea(){
+			return 10 * 10;
+		}
+	}
+L - Liskov-Substitution Principle:
+	All subtypes should be suitable with their base type without altering the correctness of the program.
+	Ex:
+	interface IFlyable {
+		void fly();
+	}
+	class Bird implements IFlyable {
+		@Override
+		public void fly() {
+			// Bird's Fly Logic.
+		}
+	}
+	class Penguin implements IFlyable {
+		@Override
+		public void fly() {
+			// Do nothing because penguin's will not fly.
+		}
+	}
+I - Interface Segregation Principle
+	Any class should not be forced to implement interface in which it does not use.
+	Ex:
+	interface IEater {
+		void eat();
+	}
+	interface IWorker {
+		void work();
+	}
+	class Robot implements IWorker {
+		@Override
+		public void work() {
+		
+		}
+	}
+D - Dependency Inversion Principle
+	Any high level modules should not depend on low level modules rather both should depend on abstraction.
+	Ex:
+	interface ISwitchable {
+		void turnOn();
+	}
+	class Switch implements ISwitchable{
+		@Override
+		public void turnOn() {
+			// Turn On Logic.
+		}
+	}
+	class Bulb {
+		private ISwitchable device = null;
+		public Bulb(ISwitchable device) {
+			this.device = device;
+		}
+	}	
