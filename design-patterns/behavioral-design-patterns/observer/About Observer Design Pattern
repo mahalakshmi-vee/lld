@@ -1,0 +1,10 @@
+About Observer Design Pattern:
+
+1. Notify changes to multiple objects.
+
+2. Observer design pattern used to establish a one to many dependency between objects, so that when one object (the subject) changes state,
+all it dependents (observers) are notified and updated automatically.
+
+3. This pattern is useful for implementing distributed event-handling systems.
+
+4. When the Observable state changes all the observers are notified and updated automatically.
